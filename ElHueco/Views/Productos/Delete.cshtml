@@ -1,0 +1,56 @@
+﻿@model ElHueco.Models.Producto
+
+@{
+    ViewBag.Title = $"Borrar producto: {@Html.DisplayFor(model => model.nombreProducto)}";
+}
+
+<h2>Gestion de productos</h2>
+
+<h3>Estas seguro que deseas eliminar este producto del inventario?</h3>
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreProducto)
+        </dt>
+
+        <dd>
+                @Html.DisplayFor(model => model.nombreProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioVenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioVenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.costoProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.costoProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.existencias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.existencias)
+        </dd>    
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> 
+            @Html.ActionLink("regresar a la lista", "Index") |
+        </div>
+    }
+</div>

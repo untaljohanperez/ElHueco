@@ -1,0 +1,47 @@
+﻿@model ElHueco.Models.Producto
+
+@{
+    ViewBag.Title = $"Detalles productos{@Html.DisplayFor(model => model.nombreProducto)}";
+ }
+<div>
+    <h4>Gestion de productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioVenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioVenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.costoProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.costoProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.existencias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.existencias)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }, htmlAttributes: new { @class = "btn btn-default"} ) |
+    @Html.ActionLink("Regresar a la lista", "Index", "", htmlAttributes: new { @class = "btn btn-default"})
+</p>
