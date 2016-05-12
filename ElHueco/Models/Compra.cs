@@ -20,6 +20,8 @@ namespace ElHueco.Models
         [Display(Name = "Ruta soporte")]
         public string pathSoporte { get; set; }
 
+        //public HttpPostedFileBase soporteCompra { get; set; }
+
         public Compra() { }
     }
 }

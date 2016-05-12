@@ -54,8 +54,9 @@ namespace ElHueco.Controllers
                 }
                 return View(compra);
             }
-            catch
+            catch(Exception e)
             {
+                             
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
         }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Web;
 
 namespace ElHueco.Models
 {
@@ -24,7 +25,7 @@ namespace ElHueco.Models
         [DataType(DataType.PhoneNumber)]
         [Display(Name ="Telefono")]
         public string telefono { get; set; }
-
+    
         public Cliente() { }
 
         public Cliente(string nombreCliente, string documentoId, string telefono, string direccion)

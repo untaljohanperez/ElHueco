@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Uploader Soporte Compra</h2>
+
+@using (Html.BeginForm("Index", "SoporteUploader", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+
+    <input type="file" name="soporteCompra" />
+
+    <input type="submit" name="enviar" value="Enviar"/>
+
+
+}
+
