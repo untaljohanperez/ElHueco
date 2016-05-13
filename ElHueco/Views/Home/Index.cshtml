@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="well col-lg-12">
+        <h2>List of Jobis</h2>
+        <p>Passing data from controller to view</p>
+        <p>Pleace remember this forever</p>
+    </div>
+</div>
+
+    @foreach (var jobi in ViewBag.Jobies)
+    {
+        <div class="col-lg-5 btn btn-default">
+           <span class="btn">@jobi</span>
+        </div>
+    }
+
